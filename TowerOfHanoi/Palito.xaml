@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="TowerOfHanoi.Palito"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TowerOfHanoi"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" SizeChanged="Palito_OnSizeChanged" Background="AliceBlue">
+    <Grid>
+        <DockPanel LastChildFill="True" ZIndex="1">
+            <Grid x:Name="Base" DockPanel.Dock="Bottom" Height="10" Width="300" Background="Brown"/>
+            <DockPanel DockPanel.Dock="Bottom"  x:Name="DiscosG" LastChildFill="False">
+                <!--<local:Disco></local:Disco>-->
+            </DockPanel>
+        </DockPanel>
+        <Grid ZIndex="0" Width="{Binding ActualHeight,ElementName=Base}" Background="Brown" DockPanel.Dock="Top"/>
+    </Grid>
+</UserControl>
